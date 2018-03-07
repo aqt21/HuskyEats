@@ -1,25 +1,17 @@
 //
 //  RestaurantCell.swift
-//  
+//  HuskyEats
 //
-//  Created by Andrew Tran on 3/4/18.
+//  Created by Andrew Tran on 3/6/18.
+//  Copyright © 2018 Andrew Tran. All rights reserved.
 //
 
 import UIKit
 
 class RestaurantCell: UITableViewCell {
-    @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var cellTitle: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var restaurantLabel: UILabel!
+    var restaurantKey: String = ""
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
