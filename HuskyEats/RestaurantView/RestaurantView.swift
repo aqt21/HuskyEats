@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+var selectedRestaurant: String = ""
 class RestaurantView: UIViewController {
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
@@ -25,9 +26,6 @@ class RestaurantView: UIViewController {
             let currTitle = currChildren.value(forKey: "title") as! String
             let restaurantKey = snapshot.key
             let currRestaurant = Restaurant(image: currImage, label: currTitle, currKey: restaurantKey)
-            
-            print(currChildren)
-            
             self.restaurants.append(currRestaurant)
             self.tableView.reloadData()
         
@@ -36,6 +34,8 @@ class RestaurantView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    
 }
 
 extension RestaurantView: UITableViewDataSource, UITableViewDelegate {
@@ -68,5 +68,9 @@ extension RestaurantView: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRestaurant = restaurants[indexPath.row].currKey
+        performSegue(withIdentifier: "restaurantToMenu", sender: selectedRestaurant)
+    }
     
 }
