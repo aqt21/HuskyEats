@@ -19,6 +19,8 @@
 		A42D4FA9204CEB8F00A999E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */; };
 		A42D4FAC204CEB8F00A999E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FAA204CEB8F00A999E7 /* LaunchScreen.storyboard */; };
 		A42D4FB4204CF1C100A999E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */; };
+		ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105620521F8600134DCA /* LoginViewController.swift */; };
+		ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105B2052653600134DCA /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A42D4FAB204CEB8F00A999E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42D4FAD204CEB8F00A999E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADC2105620521F8600134DCA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ADC2105B2052653600134DCA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 			children = (
 				A42D4FA1204CEB8F00A999E7 /* AppDelegate.swift */,
 				A42D4FA5204CEB8F00A999E7 /* Main.storyboard */,
+				ADC2105520521C9D00134DCA /* LogInView */,
+				ADC2105A205264AA00134DCA /* SignUpView */,
 				A412C503204FF63E0000BC66 /* RestaurantView */,
 				A412C504204FF6520000BC66 /* MenuView */,
 				A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */,
@@ -120,6 +126,22 @@
 				A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */,
 			);
 			path = HuskyEats;
+			sourceTree = "<group>";
+		};
+		ADC2105520521C9D00134DCA /* LogInView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2105620521F8600134DCA /* LoginViewController.swift */,
+			);
+			path = LogInView;
+			sourceTree = "<group>";
+		};
+		ADC2105A205264AA00134DCA /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
+			);
+			path = SignUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +286,9 @@
 				A412C506204FF6740000BC66 /* MenuView.swift in Sources */,
 				A412C502204FD8BB0000BC66 /* Restaurant.swift in Sources */,
 				A412C509204FF7080000BC66 /* MenuCell.swift in Sources */,
+				ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */,
 				A412C500204FCCB00000BC66 /* RestaurantCell.swift in Sources */,
+				ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */,
 				A42D4FA2204CEB8F00A999E7 /* AppDelegate.swift in Sources */,
 				A412C4FE204FCC6D0000BC66 /* RestaurantView.swift in Sources */,
 			);
