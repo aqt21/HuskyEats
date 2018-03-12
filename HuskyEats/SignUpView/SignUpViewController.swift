@@ -47,14 +47,49 @@ class SignUpViewController: UIViewController {
                         print(firebaseError.localizedDescription)
                         return
                     }
-                    self.consoleBox.textColor = UIColor.green
-                    self.consoleBox.text = "Success! Please go back to Sign in (:"
+//                    self.consoleBox.textColor = UIColor.green
+//                    self.consoleBox.text = "Success! Please go back to Sign in (:"
+                    Auth.auth().signIn(withEmail: email, password: password, completion: {(user, error) in
+                        if let firebaseError = error {
+                            print(firebaseError.localizedDescription)
+                            self.consoleBox.text = firebaseError.localizedDescription
+                            return
+                        }
+                    })
+                    
+                    
+                    
+                    let alert = UIAlertController(title: "Sign up successful", message: "You're all set up!", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: { action in
+                        let ref = Database.database().reference()
+                        let userID : String = (Auth.auth().currentUser?.uid)!
+                        
+                        let currUser = ref.child("users").child(userID)
+                        
+                        currUser.observeSingleEvent(of: .value, with: { (snapshot) in
+                            let currChildren = snapshot.value as! NSDictionary
+                            let currUserStatus = currChildren.value(forKey: "userStatus") as! String
+                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            var newView: UINavigationController
+                            if currUserStatus == "Buyer" {
+                                newView = storyboard.instantiateViewController(withIdentifier: "BuyerView") as! UINavigationController
+                            } else {
+                                newView = storyboard.instantiateViewController(withIdentifier: "SellerView") as! UINavigationController
+                            }
+                            self.present(newView, animated: true, completion: nil)
+                        })
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    
                     self.toLogin.isHidden = false
                     self.ref.child("users").child(user!.uid).setValue(["userStatus": self.userStatus.titleForSegment(at: self.userStatus.selectedSegmentIndex), "name": self.nameField.text])
                     //print("Success")
                 })
             } else {
-                self.consoleBox.text = "Passwords not matching."
+                //self.consoleBox.text = "Passwords not matching."
+                let alert = UIAlertController(title: "Passwords don't match", message: "Please try again", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         

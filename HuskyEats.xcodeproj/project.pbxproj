@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41F9C6F5F56DBC0AB2474307 /* Pods_HuskyEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993648139781803DE0BBE18B /* Pods_HuskyEats.framework */; };
+		98A27B9820570A2600547346 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98A27B9720570A2500547346 /* GoogleService-Info.plist */; };
 		A412C4FE204FCC6D0000BC66 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412C4FD204FCC6D0000BC66 /* RestaurantView.swift */; };
 		A412C500204FCCB00000BC66 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412C4FF204FCCB00000BC66 /* RestaurantCell.swift */; };
 		A412C502204FD8BB0000BC66 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412C501204FD8BB0000BC66 /* Restaurant.swift */; };
@@ -27,7 +28,6 @@
 		A47B72A92056AEFF0053C488 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A82056AEFF0053C488 /* MessageCell.swift */; };
 		A47B72AB2056AF090053C488 /* MessageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72AA2056AF090053C488 /* MessageFile.swift */; };
 		A47B72AE2056B5A00053C488 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72AD2056B5A00053C488 /* ChatView.swift */; };
-		A4F9FC572057048800E50CB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4F9FC562057048700E50CB0 /* GoogleService-Info.plist */; };
 		ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105620521F8600134DCA /* LoginViewController.swift */; };
 		ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105B2052653600134DCA /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		4979C4401579415AB43F443F /* Pods-HuskyEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuskyEats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuskyEats/Pods-HuskyEats.debug.xcconfig"; sourceTree = "<group>"; };
 		622BA40E3A09B09879056E57 /* Pods-HuskyEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuskyEats.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuskyEats/Pods-HuskyEats.release.xcconfig"; sourceTree = "<group>"; };
+		98A27B9720570A2500547346 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		993648139781803DE0BBE18B /* Pods_HuskyEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuskyEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A412C4FD204FCC6D0000BC66 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		A412C4FF204FCCB00000BC66 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		A47B72AA2056AF090053C488 /* MessageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFile.swift; sourceTree = "<group>"; };
 		A47B72AC2056B3920053C488 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		A47B72AD2056B5A00053C488 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = HuskyEats/ChatView.swift; sourceTree = SOURCE_ROOT; };
-		A4F9FC562057048700E50CB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADC2105620521F8600134DCA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADC2105B2052653600134DCA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +148,7 @@
 				A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */,
 				A42D4FAA204CEB8F00A999E7 /* LaunchScreen.storyboard */,
 				A42D4FAD204CEB8F00A999E7 /* Info.plist */,
-				A4F9FC562057048700E50CB0 /* GoogleService-Info.plist */,
+				98A27B9720570A2500547346 /* GoogleService-Info.plist */,
 			);
 			path = HuskyEats;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42D4FAC204CEB8F00A999E7 /* LaunchScreen.storyboard in Resources */,
-				A4F9FC572057048800E50CB0 /* GoogleService-Info.plist in Resources */,
+				98A27B9820570A2600547346 /* GoogleService-Info.plist in Resources */,
 				A42D4FA9204CEB8F00A999E7 /* Assets.xcassets in Resources */,
 				A42D4FA7204CEB8F00A999E7 /* Main.storyboard in Resources */,
 			);
@@ -495,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GUQXDKYUG5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HuskyEats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -513,7 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GUQXDKYUG5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HuskyEats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
