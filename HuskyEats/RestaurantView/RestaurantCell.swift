@@ -9,9 +9,6 @@
 import UIKit
 
 class RestaurantCell: UITableViewCell {
-    @IBOutlet weak var restaurantImage: UIImageView!
     @IBOutlet weak var restaurantLabel: UILabel!
     var restaurantKey: String = ""
-
-
 }

@@ -22,10 +22,9 @@ class RestaurantView: UIViewController {
         ref = Database.database().reference()
         handle = ref?.child("Restaurants").observe(.childAdded, with: { (snapshot) in
             let currChildren = snapshot.value as! NSDictionary
-            let currImage = currChildren.value(forKey: "imgurl") as! String
             let currTitle = currChildren.value(forKey: "title") as! String
             let restaurantKey = snapshot.key
-            let currRestaurant = Restaurant(image: currImage, label: currTitle, currKey: restaurantKey)
+            let currRestaurant = Restaurant(label: currTitle, currKey: restaurantKey)
             self.restaurants.append(currRestaurant)
             self.tableView.reloadData()
         
@@ -47,22 +46,6 @@ extension RestaurantView: UITableViewDataSource, UITableViewDelegate {
         let restaurant = restaurants[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RestaurantCell
         
-        if let restaurantImageUrl: String = restaurant.image {
-            let url = URL(string: restaurantImageUrl)
-            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                let backgroundQueue = DispatchQueue(label: "aqt21.github.HuskyEats",
-                                                    qos: .background,
-                                                    target: nil)
-                backgroundQueue.async {
-                    cell.imageView?.image = UIImage(data: data!)
-                }
-            }).resume()
-            
-        }
         cell.restaurantLabel.text = restaurant.label
         cell.restaurantKey = restaurant.currKey
         return cell
