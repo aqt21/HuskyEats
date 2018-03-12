@@ -136,7 +136,6 @@
 			children = (
 				A42D4FA1204CEB8F00A999E7 /* AppDelegate.swift */,
 				A42D4FA5204CEB8F00A999E7 /* Main.storyboard */,
-				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
 				A47B72AD2056B5A00053C488 /* ChatView.swift */,
 				A47B72A3205691480053C488 /* ProfileView.swift */,
 				ADC2105520521C9D00134DCA /* LogInView */,
@@ -193,6 +192,7 @@
 		ADC2105A205264AA00134DCA /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
+				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
