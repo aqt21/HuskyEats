@@ -10,12 +10,10 @@ import Foundation
 import UIKit
 
 class Restaurant {
-    var image: String
     var label: String
     var currKey: String
     
-    init(image: String, label: String, currKey: String) {
-        self.image = image
+    init(label: String, currKey: String) {
         self.label = label
         self.currKey = currKey
     }
