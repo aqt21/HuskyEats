@@ -17,6 +17,7 @@ class ProfileView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.hideKeyboardWhenTappedAround() 
         ref = Database.database().reference()
         let userID : String = (Auth.auth().currentUser?.uid)!
         let currUser = ref?.child("users").child(userID)

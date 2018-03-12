@@ -19,6 +19,7 @@ class PostOfferView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         ref = Database.database().reference()
         print(selectedItem)
         let selectedFood = ref?.child("Restaurants").child(selectedRestaurant).child("Menu").child(selectedItem)
