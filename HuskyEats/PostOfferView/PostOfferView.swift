@@ -46,6 +46,13 @@ class PostOfferView: UIViewController {
                 currRef?.setValue(["restaurant": selectedRestaurant, "item": selectedItem, "price": self.itemPrice.text, "offerPercent": userOffer.text, "offerUser": userID, "offerPrice": offerAmount / 100 * priceInDouble, "offerChat": chatRef?.key, "offerID": currOfferKey])
             }
             self.ref?.child("users").child(userID).child("messages").child((chatRef?.key)!).setValue(selectedItem)
+            let alert = UIAlertController(title: "Success", message: "Keep an eye on your messages from future sellers", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
+                self.performSegue(withIdentifier: "postToMessages", sender: self)
+            }))
+            self.present(alert, animated: true, completion: nil)
+
+            
         } else {
             let alert = UIAlertController(title: "Error", message: "Please enter a number as your offer", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))

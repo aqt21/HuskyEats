@@ -20,7 +20,7 @@ class SellerTableView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        handle = ref?.child("offers").observe(.value, with: { (snapshot) in
+        handle = ref?.child("offers").observe(.childAdded, with: { (snapshot) in
             let currChildren = snapshot.value as! NSDictionary
             let currItem = currChildren.value(forKey: "item") as! String
             let currRestaurant = currChildren.value(forKey: "restaurant") as! String

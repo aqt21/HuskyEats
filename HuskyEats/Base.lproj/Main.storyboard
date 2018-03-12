@@ -870,6 +870,7 @@
                         <outlet property="itemName" destination="UUU-Xh-hbf" id="SFA-uD-p9T"/>
                         <outlet property="itemPrice" destination="Sik-mj-iFZ" id="uQA-vk-P9x"/>
                         <outlet property="userOffer" destination="NuK-Jm-3gY" id="xzP-dl-LP1"/>
+                        <segue destination="g05-jX-FzO" kind="show" identifier="postToMessages" id="hNx-QW-Ifj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghZ-A8-bah" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -878,6 +879,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hNx-QW-Ifj"/>
         <segue reference="hBg-d0-wso"/>
         <segue reference="0tr-sW-OEU"/>
     </inferredMetricsTieBreakers>
