@@ -238,10 +238,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbT-ir-xGq">
-                                <rect key="frame" x="25" y="483" width="270" height="33"/>
+                                <rect key="frame" x="25" y="479" width="270" height="37"/>
                                 <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="FKq-Of-A1Y"/>
+                                    <constraint firstAttribute="height" constant="37" id="FKq-Of-A1Y"/>
                                 </constraints>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -858,19 +858,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Jm-3gY">
-                                <rect key="frame" x="192" y="310" width="44" height="25.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="NuK-Jm-3gY" secondAttribute="height" multiplier="26:15" id="LVd-O3-0bI"/>
-                                </constraints>
+                                <rect key="frame" x="192" y="310" width="44" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpN-ck-69t">
-                                <rect key="frame" x="59" y="477.5" width="201" height="31.5"/>
+                                <rect key="frame" x="59" y="468" width="201" height="41"/>
                                 <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QpN-ck-69t" secondAttribute="height" multiplier="32:5" id="xTm-Pi-OFb"/>
+                                    <constraint firstAttribute="width" secondItem="QpN-ck-69t" secondAttribute="height" multiplier="32:5" constant="-61.400000000000034" id="xTm-Pi-OFb"/>
                                 </constraints>
                                 <state key="normal" title="Post Offer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -925,11 +922,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghZ-A8-bah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.25" y="135"/>
+            <point key="canvasLocation" x="1061.25" y="134.1549295774648"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="93H-g4-uwU"/>
+        <segue reference="hNx-QW-Ifj"/>
         <segue reference="hBg-d0-wso"/>
         <segue reference="0tr-sW-OEU"/>
     </inferredMetricsTieBreakers>
