@@ -65,9 +65,9 @@ class LoginViewController: UIViewController {
     func toRestaurantView(){
         let userID : String = (Auth.auth().currentUser?.uid)!
         
-        let selectedFood = ref?.child("users").child(userID)
+        let currUser = ref?.child("users").child(userID)
         
-        selectedFood?.observeSingleEvent(of: .value, with: { (snapshot) in
+        currUser?.observeSingleEvent(of: .value, with: { (snapshot) in
             let currChildren = snapshot.value as! NSDictionary
             let currUserStatus = currChildren.value(forKey: "userStatus") as! String
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

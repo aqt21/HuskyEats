@@ -8,12 +8,12 @@
 
 import UIKit
 import Firebase
-var offers : [SellerItem] = []
 
+var toRemove : Int = 0
 class SellerTableView: UIViewController {
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
-   
+    var offers : [SellerItem] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,7 +21,6 @@ class SellerTableView: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         handle = ref?.child("offers").observe(.childAdded, with: { (snapshot) in
-            
             let currChildren = snapshot.value as! NSDictionary
             let currItem = currChildren.value(forKey: "item") as! String
             let currRestaurant = currChildren.value(forKey: "restaurant") as! String
@@ -33,9 +32,14 @@ class SellerTableView: UIViewController {
             let chatID = currChildren.value(forKey: "offerChat") as! String
             let offerID = currChildren.value(forKey: "offerID") as! String
             let currOffer = SellerItem(item: currItem, percent: currPercent, itemPrice: currItemPrice, offerPrice: currOfferPrice,  offerRestaurant: currRestaurant, offerUserID: currUserID, chatID: chatID, offerID: offerID)
-            offers.append(currOffer)
+            self.offers.append(currOffer)
             self.tableView.reloadData()
 
+        })
+        handle = ref?.child("offers").observe(.childRemoved, with: { (snapshot) in
+            self.offers.remove(at: toRemove)
+            self.tableView.reloadData()
+            
         })
         tableView.delegate = self
         tableView.dataSource = self
@@ -61,6 +65,7 @@ extension SellerTableView: UITableViewDataSource, UITableViewDelegate {
         cell.chatID = offer.chatID
         cell.cellButton.tag = indexPath.row
         cell.offerID  = offer.offerID
+        cell.parentView = self
         return cell
     }
     
