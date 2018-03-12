@@ -20,15 +20,21 @@ class SellerCell: UITableViewCell {
     var offerUserID: String!
     var chatID: String!
     var offerID: String!
+    var parentView: UIViewController!
     @IBOutlet weak var cellButton: UIButton!
     var ref:DatabaseReference?
     
     @IBAction func acceptClick(_ sender: Any) {
-        toRemove = cellButton.tag
-        ref = Database.database().reference()
-        let userID : String = (Auth.auth().currentUser?.uid)!
-        self.ref?.child("users").child(userID).child("messages").child(chatID).setValue(menuItem.text)
-        ref?.child("offers").child(offerID).removeValue()
+        let alert = UIAlertController(title: "Confirm?", message: "Do you want to accept this offer?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { action in
+            toRemove = self.cellButton.tag
+            self.ref = Database.database().reference()
+            let userID : String = (Auth.auth().currentUser?.uid)!
+            self.ref?.child("users").child(userID).child("messages").child(self.chatID).setValue(self.menuItem.text)
+            self.ref?.child("offers").child(self.offerID).removeValue()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: nil))
+        parentView.present(alert, animated: true, completion: nil)
     }
 
 }

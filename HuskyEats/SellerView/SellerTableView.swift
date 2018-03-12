@@ -65,6 +65,7 @@ extension SellerTableView: UITableViewDataSource, UITableViewDelegate {
         cell.chatID = offer.chatID
         cell.cellButton.tag = indexPath.row
         cell.offerID  = offer.offerID
+        cell.parentView = self
         return cell
     }
 
