@@ -8,12 +8,12 @@
 
 import UIKit
 import Firebase
-var offers : [SellerItem] = []
 
+var toRemove : Int = 0
 class SellerTableView: UIViewController {
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
-   
+    var offers : [SellerItem] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,9 +32,14 @@ class SellerTableView: UIViewController {
             let chatID = currChildren.value(forKey: "offerChat") as! String
             let offerID = currChildren.value(forKey: "offerID") as! String
             let currOffer = SellerItem(item: currItem, percent: currPercent, itemPrice: currItemPrice, offerPrice: currOfferPrice,  offerRestaurant: currRestaurant, offerUserID: currUserID, chatID: chatID, offerID: offerID)
-            offers.append(currOffer)
+            self.offers.append(currOffer)
             self.tableView.reloadData()
 
+        })
+        handle = ref?.child("offers").observe(.childRemoved, with: { (snapshot) in
+            self.offers.remove(at: toRemove)
+            self.tableView.reloadData()
+            
         })
         tableView.delegate = self
         tableView.dataSource = self

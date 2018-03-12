@@ -24,11 +24,11 @@ class SellerCell: UITableViewCell {
     var ref:DatabaseReference?
     
     @IBAction func acceptClick(_ sender: Any) {
+        toRemove = cellButton.tag
         ref = Database.database().reference()
         let userID : String = (Auth.auth().currentUser?.uid)!
         self.ref?.child("users").child(userID).child("messages").child(chatID).setValue(menuItem.text)
         ref?.child("offers").child(offerID).removeValue()
-        offers.remove(at: cellButton.tag)
     }
 
 }
