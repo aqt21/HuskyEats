@@ -241,6 +241,27 @@
                                 <color key="textColor" red="0.41759095340000002" green="0.41759095340000002" blue="0.41759095340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbT-ir-xGq">
+                                <rect key="frame" x="25" y="506" width="325" height="45"/>
+                                <color key="backgroundColor" red="0.39560848980000002" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FKq-Of-A1Y"/>
+                                </constraints>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="LhU-lQ-Sn0" eventType="touchUpInside" id="rPp-hj-vEP"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CoO-5Q-XBd">
+                                <rect key="frame" x="127" y="451" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Buyer"/>
+                                    <segment title="Seller"/>
+                                </segments>
+                                <color key="tintColor" red="0.3873564417" green="0.34311831580000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -253,15 +274,21 @@
                             <constraint firstItem="HJW-P9-Lm1" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="AUs-Xr-dak"/>
                             <constraint firstItem="eWf-Pe-hRe" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="B1y-Qv-B5U"/>
                             <constraint firstItem="4qk-Z1-zui" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="Emh-Za-mhU"/>
+                            <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="CoO-5Q-XBd" secondAttribute="trailing" constant="127" id="ICR-tb-TTZ"/>
                             <constraint firstItem="5Ox-ja-aES" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="Iow-Fa-iVp"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="3h7-6M-nko" secondAttribute="trailing" constant="25" id="JRE-bp-5oE"/>
                             <constraint firstItem="DvE-OR-jpK" firstAttribute="top" secondItem="3h7-6M-nko" secondAttribute="bottom" id="OoW-Po-rrg"/>
                             <constraint firstItem="2uO-fJ-aui" firstAttribute="top" secondItem="5Ox-ja-aES" secondAttribute="bottom" constant="35" id="RlT-nt-8rx"/>
+                            <constraint firstItem="MbT-ir-xGq" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="SaP-7i-heZ"/>
+                            <constraint firstItem="CoO-5Q-XBd" firstAttribute="top" secondItem="5Ox-ja-aES" secondAttribute="bottom" constant="24" id="Uui-al-BbP"/>
+                            <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="MbT-ir-xGq" secondAttribute="trailing" constant="25" id="Y1g-eN-gUS"/>
                             <constraint firstItem="rXm-59-O1w" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="b9O-9U-v9F"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="eWf-Pe-hRe" secondAttribute="trailing" constant="25" id="bn5-P7-8Ml"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="DvE-OR-jpK" secondAttribute="trailing" constant="25" id="bpa-b3-4hp"/>
                             <constraint firstItem="5ki-k2-8w5" firstAttribute="top" secondItem="rXm-59-O1w" secondAttribute="bottom" constant="15" id="bvW-YJ-tds"/>
                             <constraint firstItem="hiQ-f0-lTV" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="25" id="dio-WM-dbQ"/>
+                            <constraint firstItem="CoO-5Q-XBd" firstAttribute="leading" secondItem="168-vd-DaI" secondAttribute="leading" constant="127" id="eRv-7C-MZh"/>
+                            <constraint firstItem="4qk-Z1-zui" firstAttribute="top" secondItem="MbT-ir-xGq" secondAttribute="bottom" constant="20" id="jjg-DA-ZrP"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="5ki-k2-8w5" secondAttribute="trailing" constant="25" id="jqY-ir-FGw"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="4qk-Z1-zui" secondAttribute="trailing" constant="25" id="koU-dp-sHb"/>
                             <constraint firstItem="168-vd-DaI" firstAttribute="trailing" secondItem="hiQ-f0-lTV" secondAttribute="trailing" constant="25" id="o2X-d8-PwO"/>
@@ -283,6 +310,7 @@
                         <outlet property="nameField" destination="DvE-OR-jpK" id="spp-rD-AhB"/>
                         <outlet property="passwordField" destination="hiQ-f0-lTV" id="Aag-Zm-oGl"/>
                         <outlet property="toLogin" destination="4qk-Z1-zui" id="QtF-oX-4jF"/>
+                        <outlet property="userStatus" destination="CoO-5Q-XBd" id="qvm-9G-2ZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjb-wI-Tn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,6 +398,7 @@
                     <connections>
                         <segue destination="cX1-GK-ghY" kind="relationship" relationship="viewControllers" id="jg5-Zj-I51"/>
                         <segue destination="2yn-bD-Ut9" kind="relationship" relationship="viewControllers" id="0tr-sW-OEU"/>
+                        <segue destination="hSx-Ff-WIx" kind="relationship" relationship="viewControllers" id="hBg-d0-wso"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1d-oB-YcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,6 +483,88 @@
             </objects>
             <point key="canvasLocation" x="-1418.4000000000001" y="821.73913043478262"/>
         </scene>
+        <!--Messages-->
+        <scene sceneID="GIe-jb-Ck7">
+            <objects>
+                <viewController title="Messages" id="hSx-Ff-WIx" customClass="MessagesView" customModule="HuskyEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="We6-UW-TRv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-5Q-ibZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="lys-fZ-3yB" customClass="MessageCell" customModule="HuskyEats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lys-fZ-3yB" id="3v1-pG-GcB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat for: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPE-rb-Sx8">
+                                                    <rect key="frame" x="15" y="8" width="71" height="41.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSa-fW-9rA">
+                                                    <rect key="frame" x="94" y="19" width="81" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MSa-fW-9rA" secondAttribute="bottom" constant="8" id="Mmq-OO-zop"/>
+                                                <constraint firstAttribute="bottom" secondItem="dPE-rb-Sx8" secondAttribute="bottom" constant="8" id="O2P-mX-9r1"/>
+                                                <constraint firstItem="MSa-fW-9rA" firstAttribute="leading" secondItem="dPE-rb-Sx8" secondAttribute="trailing" constant="8" id="Umf-8W-4oq"/>
+                                                <constraint firstItem="MSa-fW-9rA" firstAttribute="top" secondItem="3v1-pG-GcB" secondAttribute="topMargin" constant="8" id="ZMO-eo-pZi"/>
+                                                <constraint firstItem="dPE-rb-Sx8" firstAttribute="leading" secondItem="3v1-pG-GcB" secondAttribute="leading" constant="15" id="Zlq-fR-2Vw"/>
+                                                <constraint firstItem="dPE-rb-Sx8" firstAttribute="top" secondItem="3v1-pG-GcB" secondAttribute="top" constant="8" id="hkb-B6-DI1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="transactionItem" destination="MSa-fW-9rA" id="oz2-f8-lMt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RgQ-Dp-5op" firstAttribute="trailing" secondItem="O5h-5Q-ibZ" secondAttribute="trailing" id="P1X-Si-LIN"/>
+                            <constraint firstItem="O5h-5Q-ibZ" firstAttribute="leading" secondItem="RgQ-Dp-5op" secondAttribute="leading" id="TQv-Hb-zJ8"/>
+                            <constraint firstItem="RgQ-Dp-5op" firstAttribute="bottom" secondItem="O5h-5Q-ibZ" secondAttribute="bottom" id="lr1-MP-b1z"/>
+                            <constraint firstItem="O5h-5Q-ibZ" firstAttribute="top" secondItem="RgQ-Dp-5op" secondAttribute="top" id="xpZ-EZ-fIP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RgQ-Dp-5op"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messages" id="3od-7g-5xM"/>
+                    <connections>
+                        <outlet property="tableView" destination="O5h-5Q-ibZ" id="8Kw-fm-KA1"/>
+                        <segue destination="p6i-81-TbN" kind="show" identifier="messagesToChat" id="kxx-sj-3zL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ky7-gX-7Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690.39999999999998" y="813.64317841079469"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="I9A-m8-UOG">
+            <objects>
+                <viewController title="Chat" id="p6i-81-TbN" customClass="ChatView" customModule="HuskyEats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVu-XG-9gW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JZG-Qt-TtD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOh-7J-i9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="822"/>
+        </scene>
         <!--SellerView-->
         <scene sceneID="rQJ-gM-MfD">
             <objects>
@@ -484,6 +595,7 @@
                     <connections>
                         <segue destination="rtV-VI-dtz" kind="relationship" relationship="viewControllers" id="Ug7-Re-2QV"/>
                         <segue destination="2yn-bD-Ut9" kind="relationship" relationship="viewControllers" id="pLP-Zh-4gp"/>
+                        <segue destination="hSx-Ff-WIx" kind="relationship" relationship="viewControllers" id="qgd-T9-izC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKV-zG-SJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,6 +648,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-jH-ir9">
                                                     <rect key="frame" x="313" y="49" width="49" height="30"/>
                                                     <state key="normal" title="Accept"/>
+                                                    <connections>
+                                                        <action selector="acceptClick:" destination="IZ9-H9-anP" eventType="touchUpInside" id="Ytk-OX-S0b"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPC-ll-HJi">
                                                     <rect key="frame" x="136" y="66" width="42" height="21"/>
@@ -572,6 +687,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellButton" destination="hoh-jH-ir9" id="4Kb-g7-mDW"/>
                                             <outlet property="itemPrice" destination="A2t-uT-Vtu" id="jz1-Hz-911"/>
                                             <outlet property="menuItem" destination="PAn-6L-CXR" id="rpb-6o-WuN"/>
                                             <outlet property="offerPercent" destination="JPC-ll-HJi" id="mzF-jg-Etv"/>
@@ -762,6 +878,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pLP-Zh-4gp"/>
+        <segue reference="hBg-d0-wso"/>
+        <segue reference="0tr-sW-OEU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,10 @@
 		A47B72A02056721F0053C488 /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B729F2056721F0053C488 /* SellerCell.swift */; };
 		A47B72A22056723C0053C488 /* SellerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A12056723C0053C488 /* SellerItem.swift */; };
 		A47B72A4205691480053C488 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A3205691480053C488 /* ProfileView.swift */; };
+		A47B72A72056AEB50053C488 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A62056AEB50053C488 /* MessagesView.swift */; };
+		A47B72A92056AEFF0053C488 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A82056AEFF0053C488 /* MessageCell.swift */; };
+		A47B72AB2056AF090053C488 /* MessageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72AA2056AF090053C488 /* MessageFile.swift */; };
+		A47B72AE2056B5A00053C488 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72AD2056B5A00053C488 /* ChatView.swift */; };
 		ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105620521F8600134DCA /* LoginViewController.swift */; };
 		ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105B2052653600134DCA /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +54,11 @@
 		A47B729F2056721F0053C488 /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
 		A47B72A12056723C0053C488 /* SellerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerItem.swift; sourceTree = "<group>"; };
 		A47B72A3205691480053C488 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A47B72A62056AEB50053C488 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		A47B72A82056AEFF0053C488 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		A47B72AA2056AF090053C488 /* MessageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFile.swift; sourceTree = "<group>"; };
+		A47B72AC2056B3920053C488 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		A47B72AD2056B5A00053C488 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = HuskyEats/ChatView.swift; sourceTree = SOURCE_ROOT; };
 		ADC2105620521F8600134DCA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADC2105B2052653600134DCA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +115,7 @@
 		A42D4F95204CEB8F00A999E7 = {
 			isa = PBXGroup;
 			children = (
+				A47B72AC2056B3920053C488 /* Bridging-Header.h */,
 				A42D4FA0204CEB8F00A999E7 /* HuskyEats */,
 				A42D4F9F204CEB8F00A999E7 /* Products */,
 				56AF15852534BCFD032F2714 /* Pods */,
@@ -126,6 +136,8 @@
 			children = (
 				A42D4FA1204CEB8F00A999E7 /* AppDelegate.swift */,
 				A42D4FA5204CEB8F00A999E7 /* Main.storyboard */,
+				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
+				A47B72AD2056B5A00053C488 /* ChatView.swift */,
 				A47B72A3205691480053C488 /* ProfileView.swift */,
 				ADC2105520521C9D00134DCA /* LogInView */,
 				ADC2105A205264AA00134DCA /* SignUpView */,
@@ -133,6 +145,7 @@
 				A412C504204FF6520000BC66 /* MenuView */,
 				A47B729C20565DE10053C488 /* PostOfferView */,
 				A47B7299205650680053C488 /* SellerView */,
+				A47B72A52056AE960053C488 /* MessagesView */,
 				A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */,
 				A42D4FAA204CEB8F00A999E7 /* LaunchScreen.storyboard */,
 				A42D4FAD204CEB8F00A999E7 /* Info.plist */,
@@ -159,6 +172,16 @@
 			path = PostOfferView;
 			sourceTree = "<group>";
 		};
+		A47B72A52056AE960053C488 /* MessagesView */ = {
+			isa = PBXGroup;
+			children = (
+				A47B72A62056AEB50053C488 /* MessagesView.swift */,
+				A47B72A82056AEFF0053C488 /* MessageCell.swift */,
+				A47B72AA2056AF090053C488 /* MessageFile.swift */,
+			);
+			path = MessagesView;
+			sourceTree = "<group>";
+		};
 		ADC2105520521C9D00134DCA /* LogInView */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +193,6 @@
 		ADC2105A205264AA00134DCA /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
-				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
 			);
 			path = SignUpView;
 			sourceTree = "<group>";
@@ -289,6 +311,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HuskyEats/Pods-HuskyEats-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -297,6 +321,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -314,12 +340,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A412C50A204FF7080000BC66 /* MenuItem.swift in Sources */,
+				A47B72A92056AEFF0053C488 /* MessageCell.swift in Sources */,
 				A47B72A22056723C0053C488 /* SellerItem.swift in Sources */,
 				A412C506204FF6740000BC66 /* MenuView.swift in Sources */,
+				A47B72AE2056B5A00053C488 /* ChatView.swift in Sources */,
 				A47B729B2056519C0053C488 /* SellerTableView.swift in Sources */,
 				A412C502204FD8BB0000BC66 /* Restaurant.swift in Sources */,
+				A47B72A72056AEB50053C488 /* MessagesView.swift in Sources */,
 				A412C509204FF7080000BC66 /* MenuCell.swift in Sources */,
 				ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */,
+				A47B72AB2056AF090053C488 /* MessageFile.swift in Sources */,
 				A412C500204FCCB00000BC66 /* RestaurantCell.swift in Sources */,
 				ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */,
 				A42D4FA2204CEB8F00A999E7 /* AppDelegate.swift in Sources */,
@@ -469,6 +499,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aqt21.github.HuskyEats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aqt21.github.HuskyEats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

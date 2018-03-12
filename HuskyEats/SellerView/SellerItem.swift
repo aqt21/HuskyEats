@@ -16,13 +16,17 @@ class SellerItem {
     var offerPrice: Double
     var offerRestaurant: String
     var offerUserID: String
+    var chatID: String
+    var offerID: String
     
-    init(item: String, percent: String, itemPrice: Double, offerPrice: Double,  offerRestaurant: String, offerUserID: String) {
+    init(item: String, percent: String, itemPrice: Double, offerPrice: Double,  offerRestaurant: String, offerUserID: String, chatID: String, offerID: String) {
         self.menuItem = item
         self.offerPercent = percent
         self.itemPrice = itemPrice
         self.offerPrice = offerPrice
         self.offerRestaurant = offerRestaurant
         self.offerUserID = offerUserID
+        self.chatID = chatID
+        self.offerID = offerID
     }
 }
