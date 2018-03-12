@@ -19,6 +19,13 @@
 		A42D4FA9204CEB8F00A999E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */; };
 		A42D4FAC204CEB8F00A999E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FAA204CEB8F00A999E7 /* LaunchScreen.storyboard */; };
 		A42D4FB4204CF1C100A999E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */; };
+		A47B729B2056519C0053C488 /* SellerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B729A2056519C0053C488 /* SellerTableView.swift */; };
+		A47B729E20565DFA0053C488 /* PostOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B729D20565DFA0053C488 /* PostOfferView.swift */; };
+		A47B72A02056721F0053C488 /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B729F2056721F0053C488 /* SellerCell.swift */; };
+		A47B72A22056723C0053C488 /* SellerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A12056723C0053C488 /* SellerItem.swift */; };
+		A47B72A4205691480053C488 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47B72A3205691480053C488 /* ProfileView.swift */; };
+		ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105620521F8600134DCA /* LoginViewController.swift */; };
+		ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC2105B2052653600134DCA /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		A42D4FAB204CEB8F00A999E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42D4FAD204CEB8F00A999E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A47B729A2056519C0053C488 /* SellerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerTableView.swift; sourceTree = "<group>"; };
+		A47B729D20565DFA0053C488 /* PostOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOfferView.swift; sourceTree = "<group>"; };
+		A47B729F2056721F0053C488 /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
+		A47B72A12056723C0053C488 /* SellerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerItem.swift; sourceTree = "<group>"; };
+		A47B72A3205691480053C488 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ADC2105620521F8600134DCA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ADC2105B2052653600134DCA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +126,53 @@
 			children = (
 				A42D4FA1204CEB8F00A999E7 /* AppDelegate.swift */,
 				A42D4FA5204CEB8F00A999E7 /* Main.storyboard */,
+				A47B72A3205691480053C488 /* ProfileView.swift */,
+				ADC2105520521C9D00134DCA /* LogInView */,
+				ADC2105A205264AA00134DCA /* SignUpView */,
 				A412C503204FF63E0000BC66 /* RestaurantView */,
 				A412C504204FF6520000BC66 /* MenuView */,
+				A47B729C20565DE10053C488 /* PostOfferView */,
+				A47B7299205650680053C488 /* SellerView */,
 				A42D4FA8204CEB8F00A999E7 /* Assets.xcassets */,
 				A42D4FAA204CEB8F00A999E7 /* LaunchScreen.storyboard */,
 				A42D4FAD204CEB8F00A999E7 /* Info.plist */,
 				A42D4FB3204CF1C100A999E7 /* GoogleService-Info.plist */,
 			);
 			path = HuskyEats;
+			sourceTree = "<group>";
+		};
+		A47B7299205650680053C488 /* SellerView */ = {
+			isa = PBXGroup;
+			children = (
+				A47B729A2056519C0053C488 /* SellerTableView.swift */,
+				A47B729F2056721F0053C488 /* SellerCell.swift */,
+				A47B72A12056723C0053C488 /* SellerItem.swift */,
+			);
+			path = SellerView;
+			sourceTree = "<group>";
+		};
+		A47B729C20565DE10053C488 /* PostOfferView */ = {
+			isa = PBXGroup;
+			children = (
+				A47B729D20565DFA0053C488 /* PostOfferView.swift */,
+			);
+			path = PostOfferView;
+			sourceTree = "<group>";
+		};
+		ADC2105520521C9D00134DCA /* LogInView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2105620521F8600134DCA /* LoginViewController.swift */,
+			);
+			path = LogInView;
+			sourceTree = "<group>";
+		};
+		ADC2105A205264AA00134DCA /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2105B2052653600134DCA /* SignUpViewController.swift */,
+			);
+			path = SignUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,12 +314,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A412C50A204FF7080000BC66 /* MenuItem.swift in Sources */,
+				A47B72A22056723C0053C488 /* SellerItem.swift in Sources */,
 				A412C506204FF6740000BC66 /* MenuView.swift in Sources */,
+				A47B729B2056519C0053C488 /* SellerTableView.swift in Sources */,
 				A412C502204FD8BB0000BC66 /* Restaurant.swift in Sources */,
 				A412C509204FF7080000BC66 /* MenuCell.swift in Sources */,
+				ADC2105720521F8600134DCA /* LoginViewController.swift in Sources */,
 				A412C500204FCCB00000BC66 /* RestaurantCell.swift in Sources */,
+				ADC2105C2052653600134DCA /* SignUpViewController.swift in Sources */,
 				A42D4FA2204CEB8F00A999E7 /* AppDelegate.swift in Sources */,
 				A412C4FE204FCC6D0000BC66 /* RestaurantView.swift in Sources */,
+				A47B72A02056721F0053C488 /* SellerCell.swift in Sources */,
+				A47B72A4205691480053C488 /* ProfileView.swift in Sources */,
+				A47B729E20565DFA0053C488 /* PostOfferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

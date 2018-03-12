@@ -28,7 +28,6 @@ class MenuView: UIViewController {
             let currKey = snapshot.key
             let currItem = MenuItem(title: currTitle, description: currDesc, price: currPrice, currKey: currKey)
             self.items.append(currItem)
-            print(self.items)
             self.tableView.reloadData()
             
         })
@@ -55,7 +54,8 @@ extension MenuView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "restaurantToMenu", sender: selectedRestaurant)
+        selectedItem = items[indexPath.row].currKey
+        performSegue(withIdentifier: "menuToOffer", sender: selectedRestaurant)
     }
     
 }
